@@ -24,9 +24,11 @@
 		<h1>{{ page.title }}</h1>
 		{{ content }}
 
-		{{ absolute_url }}
-		{{ '' | absolute_url }}
-		{{ 'test.html' | absolute_url }}
+		<pre>
+			PLAIN: {{ absolute_url }}
+			BLANK: {{ '' | absolute_url }}
+			APPEND: {{ 'test.html' | absolute_url }}
+		</pre>
 	</div>
 
 	<script src="{{ 'assets/general/format.js' | absolute_url }}"></script>
