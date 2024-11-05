@@ -1,0 +1,42 @@
+.yellowHover:hover { background: linear-gradient(90deg, hsl(50,  30%, 16%) 0%, var(--color-less-dark) 95%); }
+.orangeHover:hover { background: linear-gradient(90deg, hsl(30,  30%, 16%) 0%, var(--color-less-dark) 95%); }
+.redHover:hover    { background: linear-gradient(90deg, hsl(0,   30%, 16%) 0%, var(--color-less-dark) 95%); }
+.purpleHover:hover { background: linear-gradient(90deg, hsl(300, 30%, 16%) 0%, var(--color-less-dark) 95%); }
+.blueHover:hover   { background: linear-gradient(90deg, hsl(250, 30%, 20%) 0%, var(--color-less-dark) 95%); }
+.cyanHover:hover   { background: linear-gradient(90deg, hsl(190, 30%, 16%) 0%, var(--color-less-dark) 95%); }
+
+.course {
+	background: var(--color-less-dark);
+	width: calc(100% - 20px - 40px);
+	line-height: 18px;
+	padding: 10px;
+	position: relative;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+
+.course::after {
+	content: '';
+	position: absolute;
+	right: -80px;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border: 40px solid transparent;
+	border-left: 40px solid var(--color-less-dark);
+}
+
+.course img {
+	height: 60px;
+	vertical-align: middle;
+	margin-right: 20px;
+}
+
+#courseList {
+	margin-bottom: 40px;
+}
+
+#courseList a {
+	text-decoration: none;
+	color: inherit;
+}
