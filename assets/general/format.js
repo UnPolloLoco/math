@@ -1,3 +1,12 @@
+// Prepare KaTeX
+function loadKatex() {
+	let katexElementList = document.getElementsByTagName('katex');
+	for (let i = 0; i < katexElementList.length; i++) {
+		let element = katexElementList[i];
+		katex.render(element.innerText, element, {throwOnError: false});
+	}
+}
+
 // Prepare accordions
 let accordionList = document.getElementsByTagName('c-accordion');
 for (let i = 0; i < accordionList.length; i++) {
