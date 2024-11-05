@@ -23,6 +23,10 @@
 	<div id="content">
 		<h1>{{ page.title }}</h1>
 		{{ content }}
+
+		{{ absolute_url }}
+		{{ '' | absolute_url }}
+		{{ 'test.html' | absolute_url }}
 	</div>
 
 	<script src="{{ 'assets/general/format.js' | absolute_url }}"></script>
