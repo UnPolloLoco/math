@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
+
+:root {
+	--font-garamond: 'Cormorant Garamond', 'Times New Roman', Times, serif;
+	--font-tnr: 'Times New Roman', Times, serif;
+	--color-dark: rgb(25,25,25);
+	--color-less-dark: rgb(40,40,40);
+	--color-red: rgb(200,60,60);
+	--color-light-gray: rgb(170,170,170);
+	--color-yellow: rgb(220, 200, 120);
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	background: var(--color-dark);
+	color: white;
+	font-family: var(--font-garamond);
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+}
+
+#header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: calc(100% - 130px);
+	background-color: var(--color-red);
+	margin: 0;
+	padding: 20px 65px;
+}
+
+#header a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 24px;
+	text-shadow: 0 2px 1px var(--color-dark);
+	font-family: var(--font-tnr);
+}
+
+#content {
+	width: 60vw;
+	position: absolute;
+	top: 180px;
+	left: 20vw;
+	margin: 0; 
+	padding: 0;
+}
+
+h1 {
+	text-align: center;
+	font-size: 55px;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 50px;
+}
+
+p {
+	margin: 0;
+	margin-bottom: 40px;
+	padding: 0;
+	color: var(--color-light-gray);
+	line-height: 27px;
+}
+
+katex {
+	color: white;
+}
+
+a {
+	color: var(--color-yellow);
+	text-decoration: underline;
+}
+
+a:hover {
+	color: white;
+}
+
+h2 {
+	font-size: 26px;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+c-accordion {
+	display: block;
+	width: calc(100% - 80px);
+	color: white;
+	background-color: var(--color-less-dark);
+	padding: 20px 40px;
+	font-weight: bold;
+	margin-bottom: 40px;
+}
+
+c-accordion:hover {
+	cursor: pointer;
+}
+
+c-extra {
+	display: none;
+	background-color: var(--color-less-dark);
+	padding: 20px 40px;
+	padding-top: 0;
+	color: var(--color-light-gray);
+	margin-bottom: 40px;
+}
+
+c-accordionindicator {
+	float: right;
+	font-family: var(--font-tnr);
+}
+
+c-extra > c-accordion {
+	background-color: var(--color-dark);
+	margin-top: 20px;
+	margin-bottom: 0;
+}
+
+c-extra > c-extra {
+	background-color: var(--color-dark);
+	margin-bottom: 0;
+}
+
+figure {
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+figure, figure img {
+	width: 25vw;
+}
+
+.smaller, .smaller img {
+	width: 16vw;
+}
+
+figcaption {
+	color: var(--color-light-gray);
+	font-style: italic;
+	font-size: 14px;
+}
+
+c-split {
+	display: flex;
+	gap: 40px;
+	margin: 0;
+}
