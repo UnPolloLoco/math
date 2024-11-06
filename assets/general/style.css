@@ -79,11 +79,12 @@ katex {
 
 a {
 	color: var(--color-yellow);
-	text-decoration: underline;
+	text-decoration: underline 2px rgb(110, 100, 60);
 }
 
 a:hover {
 	color: white;
+	text-decoration: underline 2px var(--color-light-gray);
 }
 
 h2 {
@@ -154,4 +155,11 @@ c-split {
 	display: flex;
 	gap: 40px;
 	margin: 0;
+}
+
+ol {
+	margin: 0;
+	margin-bottom: 40px;
+	line-height: 27px;
+	padding-inline-start: 40px;
 }
