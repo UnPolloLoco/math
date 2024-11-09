@@ -7,6 +7,7 @@
 	--color-less-dark: rgb(40,40,40);
 	--color-red: rgb(200,60,60);
 	--color-light-gray: rgb(170,170,170);
+	--color-lighter-gray: rgb(220,220,220);
 	--color-yellow: rgb(220, 200, 120);
 }
 
@@ -74,7 +75,11 @@ noscript {
 }
 
 katex { color: white; }
-p katex { font-size: 16px; }
+
+p katex { 
+	color: var(--color-lighter-gray);
+	font-size: 16px; 
+}
 
 a {
 	color: var(--color-yellow);
