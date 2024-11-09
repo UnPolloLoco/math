@@ -74,9 +74,9 @@ noscript {
 	display: block;
 }
 
-katex { color: white; }
+kx { color: white; }
 
-p katex { 
+p kx { 
 	color: var(--color-lighter-gray);
 	font-size: 16px; 
 }
