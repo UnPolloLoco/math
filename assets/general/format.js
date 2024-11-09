@@ -3,7 +3,12 @@ function loadKatex() {
 	let katexElementList = document.getElementsByTagName('kx');
 	for (let i = 0; i < katexElementList.length; i++) {
 		let element = katexElementList[i];
-		katex.render(element.innerText, element, {throwOnError: false});
+		katex.render(element.innerText, element, {
+			throwOnError: false,
+			macros: {
+				'\\nl': '\\\\[0.5em]'
+			},
+		});
 	}
 }
 
