@@ -1,6 +1,6 @@
 // Prepare KaTeX
 function loadKatex() {
-	let katexElementList = document.getElementsByTagName('katex');
+	let katexElementList = document.getElementsByTagName('kx');
 	for (let i = 0; i < katexElementList.length; i++) {
 		let element = katexElementList[i];
 		katex.render(element.innerText, element, {throwOnError: false});
