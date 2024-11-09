@@ -7,7 +7,7 @@
 	--color-less-dark: rgb(40,40,40);
 	--color-red: rgb(200,60,60);
 	--color-light-gray: rgb(170,170,170);
-	--color-lighter-gray: rgb(220,220,220);
+	--color-lighter-gray: rgb(210,210,210);
 	--color-yellow: rgb(220, 200, 120);
 }
 
@@ -74,12 +74,17 @@ noscript {
 	display: block;
 }
 
-kx { color: white; }
-
-p kx { 
-	color: var(--color-lighter-gray);
-	font-size: 16px; 
+kx { 
+	color: white;
+	display: inline-block;
 }
+
+p kx, td kx, figcaption kx { 
+	color: var(--color-lighter-gray);
+	font-size: 15px; 
+}
+
+figcaption kx { font-size: 12px; }
 
 a {
 	color: var(--color-yellow);
@@ -166,4 +171,21 @@ ol {
 	margin-bottom: 40px;
 	line-height: 27px;
 	padding-inline-start: 40px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 20vw;
+	min-width: 20vw;
+	margin-bottom: 40px;
+}
+  
+td, th {
+	border: 1.5px solid var(--color-light-gray);
+	padding: 7px 10px;
+	font-size: 18px;
+}
+
+.dark {
+	color: var(--color-gray)
 }
