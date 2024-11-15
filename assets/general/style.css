@@ -6,6 +6,7 @@
 	--color-dark: rgb(25,25,25);
 	--color-less-dark: rgb(40,40,40);
 	--color-red: rgb(200,60,60);
+	--color-gray: rgb(130,130,130);
 	--color-light-gray: rgb(170,170,170);
 	--color-lighter-gray: rgb(210,210,210);
 	--color-yellow: rgb(220, 200, 120);
@@ -60,7 +61,7 @@ h1 {
 	padding-bottom: 50px;
 }
 
-p, noscript {
+p {
 	margin: 0;
 	margin-bottom: 40px;
 	padding: 0;
@@ -68,14 +69,11 @@ p, noscript {
 	line-height: 27px;
 }
 
-noscript {
-	color: var(--color-red);
-	font-weight: bold;
-	display: block;
-}
-
 kx { 
 	color: white;
+}
+
+kx, kspan {
 	display: inline-block;
 }
 
@@ -88,18 +86,25 @@ figcaption kx { font-size: 12px; }
 
 a {
 	color: var(--color-yellow);
-	text-decoration: underline 2px rgb(110, 100, 60);
+	text-decoration: underline;
 }
 
 a:hover {
 	color: white;
-	text-decoration: underline 2px var(--color-light-gray);
 }
 
 h2 {
 	font-size: 26px;
 	text-align: center;
 	margin-bottom: 40px;
+	width: 100%;
+}
+
+h3 {
+	font-size: 18px;
+	text-align: center;
+	margin-bottom: 40px;
+	width: 100%;
 }
 
 c-accordion {
@@ -119,8 +124,7 @@ c-accordion:hover {
 c-extra {
 	display: none;
 	background-color: var(--color-less-dark);
-	padding: 20px 40px;
-	padding-top: 0;
+	padding: 10px 40px 20px 40px;
 	color: var(--color-light-gray);
 	margin-bottom: 40px;
 }
@@ -154,6 +158,10 @@ figure, figure img {
 	width: 16vw;
 }
 
+.graphImg {
+	outline: solid 1px var(--color-gray);
+}
+
 figcaption {
 	color: var(--color-light-gray);
 	font-style: italic;
@@ -169,8 +177,8 @@ c-split {
 ol {
 	margin: 0;
 	margin-bottom: 40px;
-	line-height: 27px;
-	padding-inline-start: 40px;
+	color: var(--color-light-gray);
+	padding-inline-start: 30px;
 }
 
 table {
