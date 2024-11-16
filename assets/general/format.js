@@ -6,7 +6,13 @@ function loadKatex() {
 		katex.render(element.innerText, element, {
 			throwOnError: false,
 			macros: {
-				'\\nl': '\\\\[0.5em]'
+				'\\n': '\\\\[0.5em]',
+				'\\N': '\\\\[2em]',
+				'\\colorY': '\\color{yellow}',
+				'\\colorG': '\\color{lime}',
+				'\\colorW': '\\color{white}',
+				'\\undef': '\\text{undefined}',
+				'\\DNE': '\\text{DNE}',
 			},
 		});
 	}
