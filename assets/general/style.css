@@ -82,6 +82,10 @@ p kx, td kx, figcaption kx {
 	font-size: 15px; 
 }
 
+.lime { color: rgb(100,255,100); }
+.yellow { color: rgb(255,255,100); }
+.cyan { color: rgb(100,255,255); }
+
 figcaption kx { font-size: 12px; }
 
 a {
@@ -150,17 +154,11 @@ figure {
 	margin-bottom: 40px;
 }
 
-figure, figure img {
-	width: 25vw;
-}
+figure, figure img { width: 25vw; }
+img { outline: solid 1px var(--color-gray);}
 
-.smaller, .smaller img {
-	width: 16vw;
-}
-
-.graphImg {
-	outline: solid 1px var(--color-gray);
-}
+.smaller, .smaller img { width: 16vw; }
+.nooutline { outline: none; }
 
 figcaption {
 	color: var(--color-light-gray);
