@@ -1,0 +1,92 @@
+---
+layout: base
+title: Introduction to Limits
+---
+<c-split>
+	<p>
+		The limit of a function represents the value which a function <i>approaches</i>, but never reaches. Consider this graph of <kspan><kx class="yellow">f(x)</kx>.</kspan> Even though <kx class="yellow">f(2)</kx> isn't defined, a glance at the graph tells you that <kx class="yellow">f(x)</kx> appears to approach <kx>1</kx> as <kx>x</kx> gets infinitely close to—or <i>approaches</i>—<kspan><kx>2</kx>.</kspan>
+	</p>
+	<figure>
+		{% endraw %}
+			<img src="{{ 'topics/calculus/limits/intro_to_limits/lineExample.png' | absolute_url }}">
+		{% raw %}
+		<figcaption>
+			The graph of <kspan><kx>f(x) = \frac{x(x-2)}{2(x-2)}</kx>,</kspan> with a hole pictured at <kspan><kx>x=2</kx>.</kspan>
+		</figcaption>
+	</figure>
+</c-split>
+
+<p>
+	The following equation demonstrates the notation of your average limit. It would be read aloud as "the limit of <kx>f(x)</kx> as <kx>x</kx> approaches <kx>c</kx> is <kspan><kx>L</kx>."</kspan>
+</p>
+
+<h2><kx>
+	\lim\limits_{x \to c} f(x) = L
+</kx></h2>
+
+<p>
+	The limit of the aforementioned graph, as <kx>x</kx> approaches <kspan><kx>2</kx>,</kspan> would be written like so:
+</p>
+
+<h2><kx class="yellow">
+	\lim\limits_{x \to 2} \frac{x(x-2)}{2(x-2)} = 1
+</kx></h2>
+
+<p>
+	Always remember! The limit of a function represents a value that is <i>infinitely close</i> to—but <i>never reaching</i>—another value. That is why <kx>\lim\limits_{x \to 2} f(x)</kx> can be <kx>1</kx> while <kx>f(2)</kx> is <kspan><kx>\undef</kx>.</kspan> Take a look at the following examples.
+</p>
+
+<c-split>
+	<figure>
+		{% endraw %}
+			<img src="{{ 'topics/calculus/limits/intro_to_limits/parabolaExample.png' | absolute_url }}">
+		{% raw %}
+		<figcaption>
+			The graph of <kspan><kx>g(x)</kx>,</kspan> where <kx>g(x) = \frac{1}{2} x^2</kx> except for <kx>g(1) = 1</kx> and <kspan><kx>g(2) = \undef</kx>.</kspan>
+		</figcaption>
+	</figure>
+	<div>
+		<p>
+			<kx class="lime">\lim\limits_{x \to 2} g(x) = 2</kx> while <kx class="lime">g(2) = \undef</kx> because, similar to the previous example, the graph converges on <kx>y=2</kx> as <kx>x</kx> draws ever closer to <kspan><kx>2</kx>.</kspan>
+		</p>
+		<p>
+			<kx class="lime">\lim\limits_{x \to 0} g(x) = 0</kx> even when <kx class="lime">g(0) = 0</kx> as well, because limits still function the same even when <kx>f(c)</kx> is defined.
+		</p>
+		<p>
+			<kx class="lime">\lim\limits_{x \to 1} g(x) = \frac{1}{2}</kx> despite the fact that <kx class="lime">g(1) = 1</kx> because the limit of a function is what it <i>approaches</i>, not what it actually <i>is</i> at <kspan><kx>f(c)</kx>.</kspan>
+		</p>
+	</div>
+</c-split>
+
+<p>Limits can work with infinity as well:</p>
+
+<c-split>
+	<div>
+		<p>
+			<kx class="cyan">\lim\limits_{x \to 0} h(x) = \infin</kx> because both branches grow faster and faster as <kx>x</kx> nears <kspan><kx>0</kx>.</kspan>
+		</p>
+		<p>
+			<kx class="cyan">\lim\limits_{x \to \infin} h(x) = 0</kx> and <kx class="cyan">\lim\limits_{x \to -\infin} h(x) = 0</kx> because the graph is always getting closer to zero as <kx>x</kx> grows larger in either direction. Limits to positive or negative infinity are the same thing as end behavior.
+		</p>
+	</div>
+	<figure>
+		{% endraw %}
+			<img src="{{ 'topics/calculus/limits/intro_to_limits/rationalExample.png' | absolute_url }}">
+		{% raw %}
+		<figcaption>
+			The graph of <kspan><kx>h(x) = \frac{1}{16 x^2 (x+1)}</kx>,</kspan> which has vertical asymptotes at both <kx>x=-1</kx> and <kspan><kx>x=0</kx>.</kspan>
+		</figcaption>
+	</figure>
+</c-split>
+
+<p>
+	You might have noticed that <kx class="cyan">\lim\limits_{x \to -1} h(x)</kx> was skipped. This is because, as you may have guessed, there is no y-value which both sides of <kx>x=-1</kx> converge upon; the branches of the graph head in opposite directions. In cases like this where there is no limit, you would say the limit <i>does not exist</i>, written as <kx>\DNE</kx>.
+</p>
+
+<h2><kx class="cyan">
+	\lim\limits_{x \to -1} h(x) = \DNE
+</kx></h2>
+
+<p>
+	Everything so far has just been looking at graphs and, essentially, guessing what the limit is. The next step is actually solving for them.
+</p>
