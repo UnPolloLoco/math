@@ -5,10 +5,10 @@
 </head>
 <body style="background: black; color: rgb(100,100,100);">
 	<h2>Redirecting...</h2>
-	<p>If nothing happens, click <a href="{{ page.target_page absolute_url }}" style="color: rgb(100,100,200);">here</a>.</p>
+	<p>If nothing happens, click <a href="{{ page.target_page | absolute_url }}" style="color: rgb(100,100,200);">here</a>.</p>
 
 	<script>
-		window.location.replace("{{ page.target_page absolute_url }}");
+		window.location.replace("{{ page.target_page | absolute_url }}");
 	</script>
 </body>
 </html>
