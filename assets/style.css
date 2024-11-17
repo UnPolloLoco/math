@@ -10,6 +10,7 @@
 	--color-light-gray: rgb(170,170,170);
 	--color-lighter-gray: rgb(210,210,210);
 	--color-yellow: rgb(220, 200, 120);
+	--color-dark-yellow: rgb(110, 100, 60);
 }
 
 html {
@@ -88,6 +89,13 @@ p kx, td kx, figcaption kx {
 	font-size: 15px; 
 }
 
+.largeEquation {
+    font-size: 26px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
 .lime { color: rgb(100,255,100); }
 .yellow { color: rgb(255,255,100); }
 .cyan { color: rgb(100,255,255); }
@@ -96,25 +104,20 @@ figcaption kx { font-size: 12px; }
 
 a {
 	color: var(--color-yellow);
-	text-decoration: underline;
+	text-decoration: var(--color-dark-yellow) 2px underline;
 }
 
 a:hover {
 	color: white;
+	text-decoration: var(--color-gray) 2px underline;
 }
 
 h2 {
-	font-size: 26px;
-	text-align: center;
-	margin-bottom: 40px;
-	width: 100%;
-}
-
-h3 {
-	font-size: 18px;
-	text-align: center;
-	margin-bottom: 40px;
-	width: 100%;
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 20px;
+    color: var(--color-gray);
+    font-weight: bold;
 }
 
 c-accordion {
@@ -136,8 +139,11 @@ c-extra {
 	background-color: var(--color-less-dark);
 	padding: 10px 40px 20px 40px;
 	color: var(--color-light-gray);
+	margin-top: 5px;
 	margin-bottom: 40px;
 }
+
+c-extra > * { margin: 40px 0; }
 
 c-accordionindicator {
 	float: right;
