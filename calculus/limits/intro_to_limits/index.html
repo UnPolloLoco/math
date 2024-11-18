@@ -1,9 +1,12 @@
 ---
 layout: base
 title: Introduction to Limits
-
 ---
 {% raw %}
+
+<h2>
+	Meaning and Notation
+</h2>
 
 <c-split>
 	<p>
@@ -11,7 +14,7 @@ title: Introduction to Limits
 	</p>
 	<figure>
 		{% endraw %}
-			<img src="lineExample.png">
+			<img src="lineWithHole.png">
 		{% raw %}
 		<figcaption>
 			The graph of <kspan><kx>f(x) = \frac{x(x-2)}{2(x-2)}</kx>,</kspan> with a hole pictured at <kspan><kx>x=2</kx>.</kspan>
@@ -23,26 +26,30 @@ title: Introduction to Limits
 	The following equation demonstrates the notation of your average limit. It would be read aloud as "the limit of <kx>f(x)</kx> as <kx>x</kx> approaches <kx>c</kx> is <kspan><kx>L</kx>."</kspan>
 </p>
 
-<h2><kx>
+<kx class="largeEquation">
 	\lim\limits_{x \to c} f(x) = L
-</kx></h2>
+</kx>
 
 <p>
-	The limit of the aforementioned graph, as <kx>x</kx> approaches <kspan><kx>2</kx>,</kspan> would be written like so:
+	The arrow underneath the limit operator <kspan>(<kx>\to</kx>)</kspan> simply means "approaches." The limit of the aforementioned graph, as <kx>x</kx> approaches <kspan><kx>2</kx>,</kspan> would be written like so:
 </p>
 
-<h2><kx class="yellow">
+<kx class="largeEquation yellow">
 	\lim\limits_{x \to 2} \frac{x(x-2)}{2(x-2)} = 1
-</kx></h2>
+</kx>
 
 <p>
-	Always remember! The limit of a function represents a value that is <i>infinitely close</i> to—but <i>never reaching</i>—another value. That is why <kx>\lim\limits_{x \to 2} f(x)</kx> can be <kx>1</kx> while <kx>f(2)</kx> is <kspan><kx>\undef</kx>.</kspan> Take a look at the following examples.
+	Always remember! The limit of a function represents a value that is <i>infinitely close</i> to—but <i>never reaching</i>—another value. That is why <kx>\lim\limits_{x \to 2} f(x)</kx> can be <kx>1</kx> while <kx>f(2)</kx> is <kspan><kx>\undef</kx>.</kspan>
 </p>
+
+<h2>
+	Limit Examples
+</h2>
 
 <c-split>
 	<figure>
 		{% endraw %}
-			<img src="parabolaExample.png">
+			<img src="ex1Parabola.png">
 		{% raw %}
 		<figcaption>
 			The graph of <kspan><kx>g(x)</kx>,</kspan> where <kx>g(x) = \frac{1}{2} x^2</kx> except for <kx>g(1) = 1</kx> and <kspan><kx>g(2) = \undef</kx>.</kspan>
@@ -61,12 +68,12 @@ title: Introduction to Limits
 	</div>
 </c-split>
 
-<p>Limits can work with infinity as well:</p>
+<h2>Limits With Infinity</h2>
 
 <c-split>
 	<div>
 		<p>
-			<kx class="cyan">\lim\limits_{x \to 0} h(x) = \infin</kx> because both branches grow faster and faster as <kx>x</kx> nears <kspan><kx>0</kx>.</kspan>
+			<kx class="cyan">\lim\limits_{x \to 0} h(x) = \infin</kx> because both branches grow faster and faster as <kx>x</kx> nears <kspan><kx>0</kx>.</kspan> You're allowed to write that the limit equals infinity because, being a limit, it never <i>truly</i> does equal infinity.
 		</p>
 		<p>
 			<kx class="cyan">\lim\limits_{x \to \infin} h(x) = 0</kx> and <kx class="cyan">\lim\limits_{x \to -\infin} h(x) = 0</kx> because the graph is always getting closer to zero as <kx>x</kx> grows larger in either direction. Limits to positive or negative infinity are the same thing as end behavior.
@@ -74,7 +81,7 @@ title: Introduction to Limits
 	</div>
 	<figure>
 		{% endraw %}
-			<img src="rationalExample.png">
+			<img src="2_ex2Rational.png">
 		{% raw %}
 		<figcaption>
 			The graph of <kspan><kx>h(x) = \frac{1}{16 x^2 (x+1)}</kx>,</kspan> which has vertical asymptotes at both <kx>x=-1</kx> and <kspan><kx>x=0</kx>.</kspan>
@@ -83,15 +90,24 @@ title: Introduction to Limits
 </c-split>
 
 <p>
-	You might have noticed that <kx class="cyan">\lim\limits_{x \to -1} h(x)</kx> was skipped. This is because, as you may have guessed, there is no y-value which both sides of <kx>x=-1</kx> converge upon; the branches of the graph head in opposite directions. In cases like this where there is no limit, you would say the limit <i>does not exist</i>, written as <kx>\DNE</kx>.
+	You may have noticed that a limit at one of the asymtotes, <kspan><kx class="cyan">\lim\limits_{x \to -1} h(x)</kx>,</kspan> was never solved for. One branch goes up, while the other goes down—they never converge on a matching value. What does this mean for the limit? That issue will be covered next.
 </p>
 
-<h2><kx class="cyan">
-	\lim\limits_{x \to -1} h(x) = \DNE
-</kx></h2>
 
-<p>
-	Everything so far has just been looking at graphs and, essentially, guessing what the limit is. The next step is actually solving for them.
-</p>
+<h2>
+	Summary
+</h2>
+
+<ul>
+	<li>
+		This is a limit: <kx>\lim\limits_{x \to c} f(x) = L</kx>
+	</li>
+	<li>
+		As <kx>x</kx> approaches <kspan><kx>c</kx>,</kspan> <kx>f(x)</kx> approaches <kspan><kx>L</kx>.</kspan>
+	</li>
+	<li>
+		Limits represent what a function approaches, but never reaches.
+	</li>
+</ul>
 
 {% endraw %}
