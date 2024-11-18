@@ -59,7 +59,17 @@ h1 {
 	font-size: 55px;
 	margin: 0;
 	padding: 0;
-	padding-bottom: 50px;
+	margin-bottom: 80px;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: left;
+    margin: 110px 0 20px 0;
+    color: var(--color-gray);
+    font-weight: bold;
+	border-bottom: 2px solid var(--color-less-dark);
+	line-height: 28px;
 }
 
 p, noscript {
@@ -77,16 +87,12 @@ noscript {
 }
 
 kx { 
-	color: white;
+	color: var(--color-lighter-gray); 
+	font-size: 15px;
 }
 
 kx, kspan {
 	display: inline-block;
-}
-
-p kx, td kx, figcaption kx { 
-	color: var(--color-lighter-gray);
-	font-size: 15px; 
 }
 
 .largeEquation {
@@ -94,6 +100,7 @@ p kx, td kx, figcaption kx {
     text-align: center;
     width: 100%;
     margin-bottom: 40px;
+	color: white;
 }
 
 .lime { color: rgb(100,255,100); }
@@ -110,14 +117,6 @@ a {
 a:hover {
 	color: white;
 	text-decoration: var(--color-gray) 2px underline;
-}
-
-h2 {
-    font-size: 24px;
-    text-align: left;
-    margin-bottom: 20px;
-    color: var(--color-gray);
-    font-weight: bold;
 }
 
 c-accordion {
@@ -184,7 +183,7 @@ c-split {
 	margin: 0;
 }
 
-ol {
+ol, ul {
 	margin: 0;
 	margin-bottom: 40px;
 	color: var(--color-light-gray);
