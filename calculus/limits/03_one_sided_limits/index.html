@@ -1,0 +1,86 @@
+---
+layout: base
+title: One-Sided Limits
+---
+{% raw %}
+
+<h2>
+	What is a One-Sided Limit?
+</h2>
+
+<p>
+	Each side of a limit can be solved for individually. One-sided limits contain a superscript <kx>+</kx> or <kx>-</kx> on the <kx>c</kx> value to indicate which side it approaches from; <kx>c^{-}</kx> means <kx>c</kx> is approached from the left, negative side, and <kx>c^{+}</kx> means <kx>c</kx> is approached from the right, positive side.
+</p>
+
+<c-split>
+	<figure>
+		<img src="oneSidedLimit.png">
+		<figcaption>
+			The graph of <kspan><kx>f(x) = \frac{|x|}{x \sqrt{5x^2 + 1}}</kx>.</kspan>
+		</figcaption>
+	</figure>
+	<kx class="largeEquation yellow">
+		\begin{aligned}
+			\lim\limits_{x \to 0} f(x) &= \DNE
+			\N
+			\lim\limits_{x \to 0^{-}} f(x) &= -1
+			\n
+			\lim\limits_{x \to 0^{+}} f(x) &= 1
+		\end{aligned}
+	</kx>
+</c-split>
+
+
+<h2>Implications</h2>
+
+<p>
+	Since a normal, two-sided limit can only exist if both sides of <kx>x=c</kx> approach the same value, the following is true:
+</p>
+
+<kx class="largeEquation lime">
+	\begin{aligned}
+		\lim\limits_{x \to c^{-}} g(x) &\neq \lim\limits_{x \to c^{+}} g(x)
+		\n
+		\lim\limits_{x \to c} g(x) &= \DNE
+	\end{aligned}
+</kx>
+
+<p>
+	Of course, if the limit exists then that implies both one-sided limits are equal:
+</p>
+
+<kx class="largeEquation cyan">
+	\begin{aligned}
+		\lim\limits_{x \to c^{-}} h(x) = \lim\limits_{x \to c^{+}} h(x) &= L
+		\n
+		\lim\limits_{x \to c} h(x) &= L
+	\end{aligned}
+</kx>
+
+<p>
+	Everything so far has just been looking at graphs and, essentially, guessing what the limit is. The next step is actually solving for them.
+</p>
+
+<h2>
+	Summary
+</h2>
+
+<ul>
+	<li>
+		A one-sided limit is a limit which only approaches <kx>c</kx> from one side
+	</li>
+	<li>
+		One-sided limits are written as either <kx>\lim\limits_{x \to c^{-}} f(x)</kx> or <kx>\lim\limits_{x \to c^{+}} f(x)</kx>
+	</li>
+	<li>
+		<kx>c^{-}</kx> is approached from the left and <kx>c^{+}</kx> is approached from the right
+	</li>
+	<li>
+		<kx>\lim\limits_{x \to c} f(x) = \DNE</kx> if the corresponding one-sided limits aren't equal
+	</li>
+	<li>
+		If a limit exists, then it has to be equal to both of its corresponding one-sided limits
+	</li>
+</ul>
+
+{% endraw %}
