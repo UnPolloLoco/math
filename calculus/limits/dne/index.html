@@ -1,0 +1,88 @@
+---
+layout: base
+title: DNE
+---
+{% raw %}
+
+<h1>DNE</h1>
+
+<h2>What is DNE?</h2>
+
+<p>
+	If a limit at a given x-value does not converge on one single y-value, then the limit "does not exist." That is abbreviated as <kspan><kx>\DNE</kx>,</kspan> and is used as follows:
+</p>
+
+<kx class="largeEquation">
+	\lim\limits_{x \to c} f(x) = \DNE
+</kx>
+
+<p>
+	It's important to understand that the arrow in a limit operator (the <kx>\to</kx> in <kspan><kx>\lim\limits_{x \to c} f(x) = L</kx>)</kspan> means that <kx>c</kx> is being approached from <i>both</i> sides, not just from the left as it may initially seem.
+</p>
+
+<p>
+	Notice how the following table and graph do <i>not</i> converge upon a single y-value as <kspan><kx>x \to 0</kx>.</kspan> Both branches head in opposite directions, so the limit does not exist; <kspan><kx class="yellow">\lim\limits_{x \to 0} f(x) = \DNE</kx>.</kspan>
+</p>
+
+<c-split>
+	<figure>
+		<img src="dneExample.png">
+		<figcaption>
+			The graph of <kspan><kx>f(x) = \frac{1}{4x}</kx>.</kspan>
+		</figcaption>
+	</figure>
+	<table>
+		<tr>
+			<th><kx class="yellow">x</kx></th>
+			<th><kx class="yellow">f(x)</kx></th>
+		</tr>
+		<tr>
+			<td><kx>-0.1</kx></td>
+			<td><kx>-2.5</kx></td>
+		</tr>
+		<tr>
+			<td><kx>-0.01</kx></td>
+			<td><kx>-25</kx></td>
+		</tr>
+		<tr>
+			<td><kx>-0.0001</kx></td>
+			<td><kx>-2500</kx></td>
+		</tr>
+		<tr>
+			<td><kx>0</kx></td>
+			<td><kx class="dark">\undef</kx></td>
+		</tr>
+		<tr>
+			<td><kx>0.0001</kx></td>
+			<td><kx>2500</kx></td>
+		</tr>
+		<tr>
+			<td><kx>0.01</kx></td>
+			<td><kx>25</kx></td>
+		</tr>
+		<tr>
+			<td><kx>0.1</kx></td>
+			<td><kx>2.5</kx></td>
+		</tr>
+	</table>
+</c-split>
+
+<p>
+	One-sided limits, which are covered next, will provide a slightly more exact definition of what makes a limit <kx>\DNE</kx>	or not.
+</p>
+
+
+<h2>
+	Summary
+</h2>
+
+<ul>
+	<li>
+		<kx>\DNE</kx> means "does not exist"
+	</li>
+	<li>
+		If the left and right sides of <kx>x \to c</kx> approach different values, then the limit is <kx>\DNE</kx>
+	</li>
+</ul>
+
+{% endraw %}
