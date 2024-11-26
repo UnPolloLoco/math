@@ -183,6 +183,10 @@ c-split {
 	margin: 0;
 }
 
+.halfsplit > * {
+	width: calc((100% - 40px) / 2);
+}
+
 ol, ul {
 	margin: 0;
 	margin-bottom: 40px;
