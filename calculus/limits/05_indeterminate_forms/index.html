@@ -1,0 +1,139 @@
+---
+layout: base
+title: Indeterminate Forms
+---
+{% raw %}
+
+<h2>Undefined vs. Indeterminate</h2>
+
+<p>
+	If a value is undefined, then it has no value. If a value is indeterminate, then the value exists but is useless. Consider these two common headaches, <kx>\frac{n}{0}</kx> and <kspan><kx>\frac{0}{0}</kx>.</kspan>
+</p>
+
+<c-split class="halfsplit">
+	<div>
+		<p>
+			<kspan><kx class="yellow">3 \div 0</kx>,</kspan> for example, is <kx class="yellow">\undef</kx> because it doesn't have an answer. After rearranging the fraction into a multiplication problem, it's clear that not even infinity can bring <kx>0x</kx> to <kspan><kx>3</kx>.</kspan>
+		</p>
+		<kx class="yellow">
+			\begin{aligned}
+				3 \div 0 &= x
+				\n 
+				3 &= 0x
+			\end{aligned}
+		</kx>
+	</div>
+	<div>
+		<p>
+			<kx class="lime">0 \div 0</kx> is <kx class="lime">\ind</kx> because it has infinite answers, and therefore tells you nothing. Of course, <i>any</i> number multiplied by zero will be zero.
+		</p>
+		<kx class="lime">
+			\begin{aligned}
+				0 \div 0 &= x
+				\n 
+				0 &= 0x
+			\end{aligned}
+		</kx>
+	</div>
+</c-split>
+
+
+<h2>Indeterminate Forms</h2>
+
+<p>
+	An indeterminate form is a value which carries no meaning on its own, and does not relate to the actual answer; it's like asking a limit for a number, but recieving an exquisite painting of an apple instead. If direct substitution results in an indeterminate form (e.g. <kx>\lim\limits_{x \to 4} \frac{x - 4}{x^2 - 16} = \frac{(4) - 4}{(4)^2 - 16} =</kx> <kspan><kx>\frac{0}{0}</kx>),</kspan> then the function has to be modified in order to solve the limit (e.g. <kx>\lim\limits_{x \to 4} \frac{x - 4}{x^2 - 16} = \lim\limits_{x \to 4} \frac{1}{x+4} = \frac{1}{8}</kx>).</kspan> The seven indeterminate forms are as follows:
+</p>
+
+<kx class="largeequation">
+	\frac{0}{0}, \quad
+	0^0, \quad
+	\infin - \infin, \quad
+	\frac{\infin}{\infin},
+	\n
+	0(\infin), \quad
+	1^{\infin}, \quad
+	{\infin}^0
+</kx>
+
+<p>
+	All of those values have a reason for being indeterminate:
+</p>
+
+<table class="descriptions">
+	<tr>
+		<td><kx class="largeequation">
+			\frac{0}{0}
+		</td></kx>
+		<td><p>
+			As previously discussed, <kx>\frac{0}{0}</kx> is indeterminate because any value of <kx>x</kx> will satisfy its rearranged version <kspan><kx>0 = 0x</kx>.</kspan> There is no way to go off of <kx>\frac{0}{0}</kx> to get any helpful answer.
+		</p></td>
+	</tr>
+	<tr>
+		<td><kx class="largeequation">
+			0^0
+		</td></kx>
+		<td><p>
+			This problem originates from conflicting exponent properties <kx>a^0 = 1</kx> and <kspan><kx>0^a = 0</kx>.</kspan> When limits are used to attempt to find a common ground, it quickly becomes apparent that <kx>0^0</kx> has several possibilities: <kx>\lim\limits_{a \to 0^+} a^0</kx> and <kx>\lim\limits_{a \to 0^+} 0^a</kx> both directly substitute to <kspan><kx>0^0</kx>,</kspan> but <kx>\lim\limits_{a \to 0^+} a^0 = 1</kx> while <kspan><kx>\lim\limits_{a \to 0^+} 0^a = 0</kx>.</kspan> Since <kx>0^0</kx> cannot be both <kx>0</kx> and <kspan><kx>1</kx>,</kspan> it's left as indeterminate.
+			<br>
+			Keep in mind that these are indeterminate forms of <i>limits</i>—it isn't a true <kx>0^0</kx>, but rather something <i>approaching</i> <kx>0</kx> to the power of something <i>approaching</i> <kspan><kx>0</kx>.</kspan> Outside of limits, <kx>0^0</kx> is often considered to be <kspan><kx>1</kx>.</kspan>
+		</p></td>
+	</tr>
+	<tr>
+		<td><kx class="largeequation">
+			\infin - \infin
+		</td></kx>
+		<td><p>
+			Seeing as infinity a concept rather than a number, operating on it isn't as clean as it is with actual numbers. It's not equal to <kx>0</kx> because there's no certainty that each infinity is equivalent. The answer could be anything. An example of this would be <kspan><kx>\lim\limits_{x \to \infin} (2x - x)</kx>.</kspan> 
+		</p></td>
+	</tr>
+	<tr>
+		<td><kx class="largeequation">
+			\frac{\infin}{\infin}
+		</td></kx>
+		<td><p>
+			This fraction has the same issue that <kx>\infin - \infin</kx> has. You can't tell how much larger one infinity is than the other, so <kx>\frac{\infin}{\infin}</kx> is pretty much worthless.
+		</p></td>
+	</tr>
+	<tr>
+		<td><kx class="largeequation">
+			0(\infin)
+		</td></kx>
+		<td><p>
+			At first, this one seems nonsensical. How could something multiplied by zero not just be zero? Consider these similar limits, <kx>\lim\limits_{x \to 0} (x \cdot \frac{1}{x}) = 1</kx> and <kspan><kx>\lim\limits_{x \to 0} (x \cdot \frac{5}{x}) = 5</kx>.</kspan> They both directly substitute to <kspan><kx>0(\infin)</kx>,</kspan> but have different values.
+		</p></td>
+	</tr>
+	<tr>
+		<td><kx class="largeequation">
+			1^{\infin}
+		</td></kx>
+		<td><p>
+			Both <kx>\lim\limits_{x \to \infin} (1 + \frac{1}{x})^x</kx> and <kx>\lim\limits_{x \to \infin} (1 + \frac{1}{x})^{x^2}</kx> substitute to <kspan><kx>1^{\infin}</kx>,</kspan> but they equal <kx>e</kx> and <kx>\infin</kx> respectively. This discrepancy is caused by whether or not <kx>1</kx> is approached faster than <kx>\infin</kx> is.
+		</p></td>
+	</tr>
+	<tr>
+		<td><kx class="largeequation">
+			{\infin}^0
+		</td></kx>
+		<td><p>
+			Limits <kx>\lim\limits_{x \to \infin} x^{\frac{1}{x}} = 1</kx> and <kx>\lim\limits_{x \to \infin} \big(5^x\big)^{\frac{1}{x}} = 5</kx> will both substitute to <kx>{\infin}^0</kx> even though they equal different things.
+		</p></td>
+	</tr>
+</table>
+
+<h2>
+	Summary
+</h2>
+
+<ul>
+	<li>
+		<kx>\undef</kx> means no answers
+	</li>
+	<li>
+		<kx>\ind</kx> means you can't figure out the answer, as what you are given can mean many things
+	</li>
+	<li>
+		If direct substitution of a limit leads to an indeterminate form, then the limit's function must be modified before attempting to solve
+	</li>
+</ul>
+
+{% endraw %}
