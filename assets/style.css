@@ -166,6 +166,7 @@ figure {
 }
 
 figure, figure img { width: 25vw; }
+c-split figure { margin: 0; margin-bottom: 40px; }
 img { outline: solid 1px var(--color-gray);}
 
 .smaller, .smaller img { width: 16vw; }
@@ -181,11 +182,14 @@ c-split {
 	display: flex;
 	gap: 40px;
 	margin: 0;
+	align-items: flex-start;
+	justify-content: space-between;
 }
 
 .halfsplit > * {
 	width: calc((100% - 40px) / 2);
 }
+
 
 ol, ul {
 	margin: 0;
@@ -207,6 +211,21 @@ td, th {
 	font-size: 18px;
 }
 
+table.descriptions { width: 100%; }
+.descriptions td { border: 0; }
+.descriptions td kx { text-wrap: nowrap; }
+
+.descriptions td:first-child {
+	padding: 0;
+	padding-right: 40px;
+}
+
 .dark {
 	color: var(--color-gray)
+}
+
+br {
+	display: block;
+	height: 1em;
+	content: "";
 }
