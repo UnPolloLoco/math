@@ -13,6 +13,7 @@ function loadKatex() {
 				'\\colorW': '\\color{white}',
 				'\\undef': '\\text{undefined}',
 				'\\DNE': '\\text{DNE}',
+				'\\ind': '\\text{indeterminate}',
 			},
 		});
 	}
