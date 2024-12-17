@@ -1,0 +1,110 @@
+---
+layout: base
+title: Solving Basic Limits
+---
+{% raw %}
+
+<h2>Direct Substitution</h2>
+
+<table class="descriptions topalign">
+	<tr>
+		<td><p>
+			In friendly situations where <kx>c</kx> (in <kspan><kx>x \to c</kx>)</kspan> is defined and continuous, directly substituting <kx>c</kx> into the limit's function would work just fine. Polynomials will always allow direct substitution, as they have no discontinuity.
+		</p></td>
+		<td><kx>
+			\begin{aligned}
+				\lim\limits_{x \to  -2 } \big(x^3 - 2x \big) \eq ( -2 )^3 - 2( -2 )
+				\n
+				\eq  -8  +  4 
+				\n
+				\eq -4
+			\end{aligned}
+		</kx></td>
+	</tr>
+</table>
+
+<kx class="largeequation yellow">
+	\lim\limits_{x \to  -2 } \big(x^3 - 2x \big) = 4
+</kx>
+
+
+<h2>Factoring</h2>
+
+<table class="descriptions topalign">
+	<tr>
+		<td><p>
+			If direct substitution results in an <a href="../05_indeterminate_forms/">indeterminate form</a> such as <kspan><kx>\frac{0}{0}</kx>,</kspan> then factoring may help. This method works when <kx>c</kx> is a hole—that is, when all <kx>(x-c)</kx> factors in the denominator can be canceled.
+		<br>
+			The additional condition of <kx>x \neq 4</kx> for <kx>\frac{1}{x+4}</kx> (which comes from the factors being canceled out) can be ignored in this context.
+		</p></td>
+		<td><kx>
+			\begin{aligned}
+				\lim\limits_{x \to 4} \bigg( \frac{x-4}{x^2 - 16} \bigg) \eq \coldim{ \frac{(4)-4}{(4)^2 - 16} = \frac{0}{0} }
+				\nn
+				\lim\limits_{x \to 4} \bigg( \frac{x-4}{ (x-4)(x+4) } \bigg) \eq
+				\nn
+				\lim\limits_{x \to 4} \bigg( \frac{ \cancel{ x-4}}{ \cancel{ (x-4)}  (x+4)} \bigg) \eq
+				\nn
+				\lim\limits_{x \to 4} \bigg( \frac{1}{x+4} \bigg) \eq \frac{1}{(4)+4}
+				\nn
+				\eq \frac{1}{8}
+			\end{aligned}
+		</kx></td>
+	</tr>
+</table>
+
+<kx class="largeequation lime">
+	\lim\limits_{x \to 4} \bigg( \dfrac{x-4}{x^2 - 16} \bigg) = \dfrac{1}{8}
+</kx>
+
+
+<h2>Rationalization</h2>
+
+<table class="descriptions topalign">
+	<tr>
+		<td><p>
+			Even though rationalization is more commonly used to take radicals out of the denominator, it can also be used to solve some limits too. To rationalize, multiply both sides of the fraction by the conjugate of whichever side contains the radical.
+		</p></td>
+		<td><kx>
+			\begin{aligned}
+				\lim\limits_{x \to 2} \Bigg( \frac{\sqrt{2x} - 2}{x - 2} \Bigg) \eq \coldim{ \frac{\sqrt{2(2)} - 2}{(2) - 2} = \frac{0}{0} }
+				\n
+				\lim\limits_{x \to 2} \Bigg( \frac{\sqrt{2x} - 2}{x - 2} \cdot \frac{\sqrt{2x} + 2}{\sqrt{2x} + 2} \Bigg)  \eq
+				\n
+				\lim\limits_{x \to 2} \Bigg( \frac{2x - 4}{(x-2)(\sqrt{2x} + 2)} \Bigg) \eq
+				\n
+				\lim\limits_{x \to 2} \Bigg( \frac{2(x - 2)}{(x-2)(\sqrt{2x} + 2)} \Bigg) \eq
+				\n
+				\lim\limits_{x \to 2} \Bigg( \frac{2 \cancel{(x - 2)}}{\cancel{(x-2)}(\sqrt{2x} + 2)} \Bigg) \eq
+				\n
+				\lim\limits_{x \to 2} \Bigg( \frac{2}{\sqrt{2x} + 2} \Bigg) \eq \frac{2}{\sqrt{2(2)} + 2}
+				\n 
+				\eq \frac{1}{2}
+			\end{aligned}
+		</kx></td>
+	</tr>
+</table>
+
+<kx class="largeequation cyan">
+	\lim\limits_{x \to 2} \Bigg( \dfrac{\sqrt{2x} - 2}{x - 2} \Bigg) = \dfrac{1}{2}
+</kx>
+
+
+<h2>Summary</h2>
+
+<ul>
+	<li>
+		Directly substituting <kx>c</kx> into <kx>f(x)</kx> works with common, friendly functions
+	</li>
+	<li>
+		If direct substitution results in an <a href="../05_indeterminate_forms/">indeterminate form</a>, then the function must be modified in order to solve
+	</li>
+	<li>
+		Strategy 1: Factor both sides of the fraction and simplify
+	</li>
+	<li>
+		Strategy 2: Rationalize and simplify
+	</li>
+</ul>
+
+{% endraw %}
